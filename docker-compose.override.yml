@@ -1,0 +1,11 @@
+demoapp:
+  
+  # map our application source code, in full, to the application root of our container
+  volumes:
+    - .:/var/www/demoapp
+ 
+web:
+ 
+  # use whatever volumes are configured for the app container
+  volumes_from:
+    - demoapp

@@ -1,0 +1,18 @@
+  database: dbdapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+ 
+development:
+  <<: *default
+  database: dev_db #your_dev_db_name #CHANGE ME
+ 
+test:
+  <<: *default
+  database: test_db #your_test_db_name #CHANGE ME
+ 
+production:
+  <<: *default
+  database: prod_db
